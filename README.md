@@ -1,6 +1,9 @@
 # Final-Project
 
-Our Final Project attempts to predict crime in the City of Chicago by Community Area and IUCR Code
+Our Final Project attempts to predict crime in the City of Chicago by Community Area and IUCR Code.
+
+<h2>Definitions</h2>
+"A community area is one of 77 pre-defined Chicago areas with boundaries that have remained, for the most part, stable since the 1920s. Community areas were created so the census bureau and social scientists could track statistics consistently in defined areas over time" -https://www.tripsavvy.com/chicago-area-neighborhoods-613858
 
 Community Areas are as Follows:
 
