@@ -4,8 +4,18 @@ Our Final Project attempts to predict crime in the City of Chicago by Community 
 
 Community Areas are as Follows:
 
-<table>
+ <Table>
+ <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
   <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  </table>
     
 
 CA_CODE	CA_NAME	CA_SIDE
