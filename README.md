@@ -10,11 +10,6 @@ Community Areas are as Follows:
     <th>Name</th> 
     <th>'Side'</th>
   </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
-  </tr>
  <tr><td>1</td><td>Rogers Park</td><td>Far North Side</td>
 <tr><td>2</td><td>West Ridge</td><td>Far North Side</td>
 <tr><td>3</td><td>Uptown</td><td>Far North Side</td>
