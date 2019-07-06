@@ -6,93 +6,90 @@ Community Areas are as Follows:
 
  <Table>
  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
+    <th>Code</th>
+    <th>Name</th> 
+    <th>'Side'</th>
   </tr>
   <tr>
     <td>Jill</td>
     <td>Smith</td> 
     <td>50</td>
   </tr>
-  </table>
-    
-
-CA_CODE	CA_NAME	CA_SIDE
-1	Rogers Park	Far North Side
-2	West Ridge	Far North Side
-3	Uptown	Far North Side
-4	Lincoln Square	Far North Side
-5	North Center	North Side
-6	Lakeview	North Side
-7	Lincoln Park	North Side
-8	Near North Side	Central
-9	Edison Park	Far North Side
-10	Norwood Park	Far North Side
-11	Jefferson Park	Far North Side
-12	Forest Glen	Far North Side
-13	North Park	Far North Side
-14	Albany Park	Far North Side
-15	Portage Park	Northwest Side
-16	Irving Park	Northwest Side
-17	Dunning	Northwest Side
-18	Montclare	Northwest Side
-19	Belmont Cragin	Northwest Side
-20	Hermosa	Northwest Side
-21	Avondale	North Side
-22	Logan Square	North Side
-23	Humboldt Park	West Side
-24	West Town	West Side
-25	Austin	West Side
-26	West Garfield Park	West Side
-27	East Garfield Park	West Side
-28	Near West Side	West Side
-29	North Lawndale	West Side
-30	South Lawndale	West Side
-31	Lower West Side	West Side
-32	Loop	Central
-33	Near South Side	Central
-34	Armour Square	South Side
-35	Douglas	South Side
-36	Oakland	South Side
-37	Fuller Park	South Side
-38	Grand Boulevard	South Side
-39	Kenwood	South Side
-40	Washington Park	South Side
-41	Hyde Park	South Side
-42	Woodlawn	South Side
-43	South Shore	South Side
-44	Chatham	Far Southeast Side
-45	Avalon Park	Far Southeast Side
-46	South Chicago	Far Southeast Side
-47	Burnside	Far Southeast Side
-48	Calumet Heights	Far Southeast Side
-49	Roseland	Far Southeast Side
-50	Pullman	Far Southeast Side
-51	South Deering	Far Southeast Side
-52	East Side	Far Southeast Side
-53	West Pullman	Far Southeast Side
-54	Riverdale	Far Southeast Side
-55	Hegewisch	Far Southeast Side
-56	Garfield Ridge	Southwest Side
-57	Archer Heights	Southwest Side
-58	Brighton Park	Southwest Side
-59	McKinley Park	Southwest Side
-60	Bridgeport	South Side
-61	New City	Southwest Side
-62	West Elsdon	Southwest Side
-63	Gage Park	Southwest Side
-64	Clearing	Southwest Side
-65	West Lawn	Southwest Side
-66	Chicago Lawn	Southwest Side
-67	West Englewood	Southwest Side
-68	Englewood	Southwest Side
-69	Greater Grand Crossing	South Side
-70	Ashburn	Far Southwest Side
-71	Auburn Gresham	Far Southwest Side
-72	Beverly	Far Southwest Side
-73	Washington Heights	Far Southwest Side
-74	Mount Greenwood	Far Southwest Side
-75	Morgan Park	Far Southwest Side
-76	O'Hare	Far North Side
-77	Edgewater	Far North Side
+ <tr><td>1</td><td>Rogers Park</td><td>Far North Side</td>
+<tr><td>2</td><td>West Ridge</td><td>Far North Side</td>
+<tr><td>3</td><td>Uptown</td><td>Far North Side</td>
+<tr><td>4</td><td>Lincoln Square</td><td>Far North Side</td>
+<tr><td>5</td><td>North Center</td><td>North Side</td>
+<tr><td>6</td><td>Lakeview</td><td>North Side</td>
+<tr><td>7</td><td>Lincoln Park</td><td>North Side</td>
+<tr><td>8</td><td>Near North Side</td><td>Central</td>
+<tr><td>9</td><td>Edison Park</td><td>Far North Side</td>
+<tr><td>10</td><td>Norwood Park</td><td>Far North Side</td>
+<tr><td>11</td><td>Jefferson Park</td><td>Far North Side</td>
+<tr><td>12</td><td>Forest Glen</td><td>Far North Side</td>
+<tr><td>13</td><td>North Park</td><td>Far North Side</td>
+<tr><td>14</td><td>Albany Park</td><td>Far North Side</td>
+<tr><td>15</td><td>Portage Park</td><td>Northwest Side</td>
+<tr><td>16</td><td>Irving Park</td><td>Northwest Side</td>
+<tr><td>17</td><td>Dunning</td><td>Northwest Side</td>
+<tr><td>18</td><td>Montclare</td><td>Northwest Side</td>
+<tr><td>19</td><td>Belmont Cragin</td><td>Northwest Side</td>
+<tr><td>20</td><td>Hermosa</td><td>Northwest Side</td>
+<tr><td>21</td><td>Avondale</td><td>North Side</td>
+<tr><td>22</td><td>Logan Square</td><td>North Side</td>
+<tr><td>23</td><td>Humboldt Park</td><td>West Side</td>
+<tr><td>24</td><td>West Town</td><td>West Side</td>
+<tr><td>25</td><td>Austin</td><td>West Side</td>
+<tr><td>26</td><td>West Garfield Park</td><td>West Side</td>
+<tr><td>27</td><td>East Garfield Park</td><td>West Side</td>
+<tr><td>28</td><td>Near West Side</td><td>West Side</td>
+<tr><td>29</td><td>North Lawndale</td><td>West Side</td>
+<tr><td>30</td><td>South Lawndale</td><td>West Side</td>
+<tr><td>31</td><td>Lower West Side</td><td>West Side</td>
+<tr><td>32</td><td>Loop</td><td>Central</td>
+<tr><td>33</td><td>Near South Side</td><td>Central</td>
+<tr><td>34</td><td>Armour Square</td><td>South Side</td>
+<tr><td>35</td><td>Douglas</td><td>South Side</td>
+<tr><td>36</td><td>Oakland</td><td>South Side</td>
+<tr><td>37</td><td>Fuller Park</td><td>South Side</td>
+<tr><td>38</td><td>Grand Boulevard</td><td>South Side</td>
+<tr><td>39</td><td>Kenwood</td><td>South Side</td>
+<tr><td>40</td><td>Washington Park</td><td>South Side</td>
+<tr><td>41</td><td>Hyde Park</td><td>South Side</td>
+<tr><td>42</td><td>Woodlawn</td><td>South Side</td>
+<tr><td>43</td><td>South Shore</td><td>South Side</td>
+<tr><td>44</td><td>Chatham</td><td>Far Southeast Side</td>
+<tr><td>45</td><td>Avalon Park</td><td>Far Southeast Side</td>
+<tr><td>46</td><td>South Chicago</td><td>Far Southeast Side</td>
+<tr><td>47</td><td>Burnside</td><td>Far Southeast Side</td>
+<tr><td>48</td><td>Calumet Heights</td><td>Far Southeast Side</td>
+<tr><td>49</td><td>Roseland</td><td>Far Southeast Side</td>
+<tr><td>50</td><td>Pullman</td><td>Far Southeast Side</td>
+<tr><td>51</td><td>South Deering</td><td>Far Southeast Side</td>
+<tr><td>52</td><td>East Side</td><td>Far Southeast Side</td>
+<tr><td>53</td><td>West Pullman</td><td>Far Southeast Side</td>
+<tr><td>54</td><td>Riverdale</td><td>Far Southeast Side</td>
+<tr><td>55</td><td>Hegewisch</td><td>Far Southeast Side</td>
+<tr><td>56</td><td>Garfield Ridge</td><td>Southwest Side</td>
+<tr><td>57</td><td>Archer Heights</td><td>Southwest Side</td>
+<tr><td>58</td><td>Brighton Park</td><td>Southwest Side</td>
+<tr><td>59</td><td>McKinley Park</td><td>Southwest Side</td>
+<tr><td>60</td><td>Bridgeport</td><td>South Side</td>
+<tr><td>61</td><td>New City</td><td>Southwest Side</td>
+<tr><td>62</td><td>West Elsdon</td><td>Southwest Side</td>
+<tr><td>63</td><td>Gage Park</td><td>Southwest Side</td>
+<tr><td>64</td><td>Clearing</td><td>Southwest Side</td>
+<tr><td>65</td><td>West Lawn</td><td>Southwest Side</td>
+<tr><td>66</td><td>Chicago Lawn</td><td>Southwest Side</td>
+<tr><td>67</td><td>West Englewood</td><td>Southwest Side</td>
+<tr><td>68</td><td>Englewood</td><td>Southwest Side</td>
+<tr><td>69</td><td>Greater Grand Crossing</td><td>South Side</td>
+<tr><td>70</td><td>Ashburn</td><td>Far Southwest Side</td>
+<tr><td>71</td><td>Auburn Gresham</td><td>Far Southwest Side</td>
+<tr><td>72</td><td>Beverly</td><td>Far Southwest Side</td>
+<tr><td>73</td><td>Washington Heights</td><td>Far Southwest Side</td>
+<tr><td>74</td><td>Mount Greenwood</td><td>Far Southwest Side</td>
+<tr><td>75</td><td>Morgan Park</td><td>Far Southwest Side</td>
+<tr><td>76</td><td>O'Hare</td><td>Far North Side</td>
+<tr><td>77</td><td>Edgewater</td><td>Far North Side</td>
+</table>
