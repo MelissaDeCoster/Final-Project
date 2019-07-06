@@ -4,6 +4,10 @@ Our Final Project attempts to predict crime in the City of Chicago by Community 
 
 Community Areas are as Follows:
 
+<table>
+  <tr>
+    
+
 CA_CODE	CA_NAME	CA_SIDE
 1	Rogers Park	Far North Side
 2	West Ridge	Far North Side
