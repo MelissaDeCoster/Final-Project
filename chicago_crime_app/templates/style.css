@@ -1,0 +1,38 @@
+.card-body {
+    align-content: center;
+}
+
+.card-degrees {
+    font-size: 60px;
+}
+
+.card-text {
+    font-size: 30px;
+}
+
+.prediction {
+    font-size: 60px;
+}
+
+.jumbotron-fluid{
+    background-color: rgb(179,221,243);
+    margin-top: 70px;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Arvo', serif;
+}
+
+
+
+.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light{
+    font-family:  'Arvo', serif;
+}
+
+a.nav-link:hover  {
+    color: red;
+}

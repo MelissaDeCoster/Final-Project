@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Library for Icons -->
+    <script src="https://kit.fontawesome.com/c3aba3a6dc.js"></script>
+
+    <!-- Reference to Our CSS File -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Josefin+Sans:400,700&display=swap"
+        rel="stylesheet">
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">CrimeBot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Crime Forecast <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Crime Predictor <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Statistics <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Definitions <span class="sr-only">(current)</span></a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Chicago Crime Predictor</h1>
+            <p class="lead">Machine Learning for a more predictable world.</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>3-Day Crime Forecast</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">Arsen</option>
+                        <option value="2">Burglary</option>
+                        <option value="3">Battary</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Crime</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">Rogers Park</option>
+                        <option value="2">Loop</option>
+                        <option value="3">Edgewater</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Community Area</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <div class="card-body ">
+                        <i class="fas fa-sun fa-5x"></i>
+                        <h5 class="card-title card-degrees">80º F</h5>
+                        <p class="card-text">31 Incidents</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-cloud-showers-heavy fa-5x"></i>
+                        <h5 class="card-title card-degrees">65º F</h5>
+                        <p class="card-text">78 Incidents</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-cloud-sun fa-5x"></i>
+                        <h5 class="card-title card-degrees">75º F</h5>
+                        <p class="card-text">101 Incidents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Crime Predictor</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">Arsen</option>
+                        <option value="2">Burglary</option>
+                        <option value="3">Battary</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Crime</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">Rogers Park</option>
+                        <option value="2">Loop</option>
+                        <option value="3">Edgewater</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Community Area</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">40º F</option>
+                        <option value="2">50º F</option>
+                        <option value="3">60º F</option>
+                        <option value="3">70º F</option>
+                        <option value="3">80º F</option>
+                        <option value="3">90º F</option>
+                        <option value="3">100º F</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Temperature</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text prediction">101 Incidents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text prediction">PLACEHOLDER FOR GRAPH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text prediction">PLACEHOLDER FOR GRAPH</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Data & Statistics</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                        <option selected>Choose...</option>
+                        <option value="1">All Crimes</option>
+                        <option value="1">Arsen</option>
+                        <option value="2">Burglary</option>
+                        <option value="3">Battary</option>
+                    </select>
+                    <div class="input-group-append">
+                        <label class="input-group-text" for="inputGroupSelect02">Crime</label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <p class="card-text prediction">PLACEHOLDER FOR Map</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <p class="card-text prediction">PLACEHOLDER FOR GRAPH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Descriptions and Sources</h2>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <br>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
