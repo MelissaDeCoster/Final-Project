@@ -36,3 +36,9 @@ h2 {
 a.nav-link:hover  {
     color: red;
 }
+
+#map,
+body,
+html {
+  height: 800px;
+}
