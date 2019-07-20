@@ -14,8 +14,68 @@ var map = L.map("map", {
   
   var link = "../static/sourcedata/communityarea.geojson";
   
+
+  // Function that will determine the color of a neighborhood based on the borough it belongs to
+function chooseColor(community) {
+  switch (community) {
+  case "DOUGLAS":
+    return "yellow";
+  case "ROGERS PARK":
+    return "red";
+  case "Manhattan":
+    return "orange";
+  case "Queens":
+    return "green";
+  case "Staten Island":
+    return "purple";
+  default:
+    return "black";
+  }
+}
+
+
+  // // Grabbing our GeoJSON data..
+  // d3.json(link, function(data) {
+  //   // Creating a GeoJSON layer with the retrieved data
+  //   L.geoJson(data).addTo(map);
+  // });
+
   // Grabbing our GeoJSON data..
-  d3.json(link, function(data) {
-    // Creating a GeoJSON layer with the retrieved data
-    L.geoJson(data).addTo(map);
-  });
+d3.json(link, function(data) {
+  // Creating a geoJSON layer with the retrieved data
+  L.geoJson(data, {
+    // Style each feature (in this case a neighborhood)
+    style: function(feature) {
+      return {
+        color: "black",
+        // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
+        fillColor: chooseColor(feature.properties.community),
+        fillOpacity: 0.5,
+        weight: 1.5
+      };
+    },
+    // Called on each feature
+    onEachFeature: function(feature, layer) {
+      // Set mouse events to change map styling
+      layer.on({
+        // When a user's mouse touches a map feature, the mouseover event calls this function, that feature's opacity changes to 90% so that it stands out
+        mouseover: function(event) {
+          layer = event.target;
+          layer.setStyle({
+            fillOpacity: 0.9
+          });
+        },
+        // When the cursor no longer hovers over a map feature - when the mouseout event occurs - the feature's opacity reverts back to 50%
+        mouseout: function(event) {
+          layer = event.target;
+          layer.setStyle({
+            fillOpacity: 0.5
+          });
+        },
+      });
+      // Giving each feature a pop-up with information pertinent to it
+      layer.bindPopup("<p>" + feature.properties.community + "</p> <hr>");
+
+    }
+  }).addTo(map);
+});
