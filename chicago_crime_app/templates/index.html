@@ -45,10 +45,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#crimeforecastheader">Crime Forecast <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#crimeforecastheader">Crime Forecast <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#crimepredictorheader">Crime Predictor <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#crimepredictorheader">Crime Predictor <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#statisticsheader">Statistics <span class="sr-only">(current)</span></a>
@@ -79,7 +81,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <div class="input-group mb-3">
                     <select class="custom-select" id="forecastcrime">
                         <option selected>Choose...</option>
@@ -89,24 +91,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="input-group mb-3">
-                    <select class="custom-select" id="inputGroupSelect02">
-                        <option selected>Choose...</option>
-                        <option value="1">Rogers Park</option>
-                        <option value="2">Loop</option>
-                        <option value="3">Edgewater</option>
-                    </select>
-                    <div class="input-group-append">
-                        <label class="input-group-text" for="inputGroupSelect02">Community Area</label>
-                    </div>
-                </div>
-            </div>
         </div>
 
 
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body ">
                         <i class="fas fa-sun fa-5x"></i>
@@ -115,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
                         <i class="fas fa-cloud-showers-heavy fa-5x"></i>
@@ -124,12 +113,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
                         <i class="fas fa-cloud-sun fa-5x"></i>
-                        <h5 class="card-title card-degrees">75º F</h5>
-                        <p class="card-text">101 Incidents</p>
+                        <h5 class="card-title card-degrees">65º F</h5>
+                        <p class="card-text">78 Incidents</p>
                     </div>
                 </div>
             </div>
@@ -141,7 +130,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="input-group mb-3">
                     <select class="custom-select" id="predictorcrime">
                         <option selected>Choose...</option>
@@ -153,7 +142,7 @@
             </div>
 
 
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="input-group mb-3">
                     <select class="custom-select" id="inputGroupSelect02">
                         <option selected>Choose...</option>
@@ -172,7 +161,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <div class="card text-center">
                     <div class="card-body">
                         <p class="card-text prediction">101 Incidents</p>
@@ -182,14 +171,14 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-body">
                         <p class="card-text prediction">PLACEHOLDER FOR GRAPH</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-body">
                         <p class="card-text prediction">PLACEHOLDER FOR GRAPH</p>
@@ -200,13 +189,13 @@
         <br>
 
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <h2 id="statisticsheader">Data & Statistics</h2>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <div class="input-group mb-3">
                     <select class="custom-select" id="staticcrime">
                         <option selected>Choose...</option>
@@ -221,24 +210,29 @@
         <br>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div id="map"></div>
             </div>
-            <div class="col-sm-6">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <p class="card-text prediction">PLACEHOLDER FOR GRAPH</p>
-                    </div>
-                </div>
+            <div class="col-md-6">
+                <div id="pie"></div>
             </div>
         </div>
         <br>
 
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-md-12">
                 <h2 id="dataheader">Descriptions and Sources</h2>
-                <p>This is place holder text for discussion of our process Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                
+                <p>This is place holder text for discussion of our process Sed ut perspiciatis unde omnis iste natus
+                    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                    qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                    dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+                    ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+                    iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+                    dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+
                 <h3>Sources:</h3>
                 <ul>
                     <li>City of Chicago Crime API</li>
@@ -248,20 +242,13 @@
                 </ul>
             </div>
         </div>
-
-
-
-
-
-
-
     </div>
     <br>
 
 
 
     <!-- JS  -->
-    <script type="text/javascript" src="../static/js/app.js"></script>
+    <script type="text/javascript" src="../static/js/staticgraph.js"></script>
     <script type="text/javascript" src="../static/js/config.js"></script>
     <script type="text/javascript" src="../static/js/staticmap.js"></script>
     <script type="text/javascript" src="../static/js/dropdown.js"></script>

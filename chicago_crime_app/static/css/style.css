@@ -17,8 +17,12 @@
 
 
 .jumbotron-fluid{
-    background-color: rgb(179,221,243);
+    color:rgb(158, 18, 8);
     margin-top: 70px;
+    background-image: url("../img/chicago-2858987_960_720.png");
+    background-position: top;
+    text-align: center;
+    padding-top: 30px;
 }
 
 h1 {
@@ -27,6 +31,7 @@ h1 {
 
 h2 {
     font-family: 'Arvo', serif;
+    color:rgb(158, 18, 8);
 }
 
 

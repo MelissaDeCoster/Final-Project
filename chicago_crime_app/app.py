@@ -18,34 +18,28 @@ db = SQLAlchemy(app)
 
 path_for_this_file = os.path.dirname(__file__)
 
-# Load in your csv data
+# Load in your map csv data
 db_table_name = "mapdata"
-absolute_csv_path = os.path.join(path_for_this_file,"static","sourcedata","gamedatamap.csv")
+absolute_csv_path = os.path.join(path_for_this_file,"static","sourcedata","map_data.csv")
 df = pd.read_csv(absolute_csv_path)
 
-# Load in Nadia csv data
-db_table_name2 = "goaldata"
-absolute_csv_path2 = os.path.join(path_for_this_file,"static","sourcedata","goals.csv")
+# Load in graph csv data
+db_table_name2 = "graphdata"
+absolute_csv_path2 = os.path.join(path_for_this_file,"static","sourcedata","graph_data.csv")
 df2 = pd.read_csv(absolute_csv_path2)
 
-# Load in summary csv data
-absolute_csv_path3 = os.path.join(path_for_this_file,"static","sourcedata","game_summary_stats.csv")
-db_table_name3 = "summarydata"
-df3 = pd.read_csv(absolute_csv_path3)
 
 print("\nClean and transform ....\n")
 # CLEAN
 # TRANSFORM
 print(df.head())
 print(df2.head())
-print(df3.head())
 
 df.to_sql(db_table_name, con=db.engine, if_exists="replace", chunksize=20000)
-print("Melissa Data Done!")
+print("Map Data Loaded!")
 df2.to_sql(db_table_name2, con=db.engine, if_exists="replace", chunksize=20000)
-print("Nadia Data Done!")
-df3.to_sql(db_table_name3, con=db.engine, if_exists="replace", chunksize=20000)
-print("Summary Data Done!")
+print("Graph Data Loaded!")
+
 
 
 # *********************************************
@@ -55,15 +49,6 @@ print("Summary Data Done!")
 @app.route("/")
 def renderHome():
     return render_template("index.html")
-
-@app.route("/map")
-def renderMap():
-    return render_template("map.html")
-
-@app.route("/dashboard")
-def renderDashboard():
-    return render_template("dashboard.html")
-
 
 # *********************************************
 # ************** API ENDPOINTS ****************
