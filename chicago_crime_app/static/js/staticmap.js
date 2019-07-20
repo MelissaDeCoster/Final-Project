@@ -1,7 +1,7 @@
 // Creating map object
 var map = L.map("map", {
     center: [41.8321135,-87.6804194],
-    zoom: 11
+    zoom: 10
   });
   
   // Adding tile layer
@@ -12,7 +12,7 @@ var map = L.map("map", {
     accessToken: API_KEY
   }).addTo(map);
   
-  var link = "https://nu-chicago-crime-app.s3.us-east-2.amazonaws.com/Boundaries+-+Community+Areas+(current).geojson";
+  var link = "../static/sourcedata/communityarea.geojson";
   
   // Grabbing our GeoJSON data..
   d3.json(link, function(data) {

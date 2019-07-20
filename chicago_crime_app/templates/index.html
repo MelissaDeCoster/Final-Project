@@ -31,7 +31,7 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
 
-    <title>Hello, world!</title>
+    <title>Chicago CrimeBot</title>
 </head>
 
 <body>
@@ -45,16 +45,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Crime Forecast <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#crimeforecastheader">Crime Forecast <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Crime Predictor <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#crimepredictorheader">Crime Predictor <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Statistics <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#statisticsheader">Statistics <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Definitions <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#dataheader">Definitions <span class="sr-only">(current)</span></a>
                 </li>
 
 
@@ -75,7 +75,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2>3-Day Crime Forecast</h2>
+                <h2 id="crimeforecastheader">3-Day Crime Forecast</h2>
             </div>
         </div>
         <div class="row">
@@ -135,7 +135,7 @@
             </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row" id="crimepredictorheader">
             <div class="col-sm-12">
                 <h2>Crime Predictor</h2>
             </div>
@@ -201,7 +201,7 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <h2>Data & Statistics</h2>
+                <h2 id="statisticsheader">Data & Statistics</h2>
             </div>
         </div>
 
@@ -236,7 +236,16 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <h2>Descriptions and Sources</h2>
+                <h2 id="dataheader">Descriptions and Sources</h2>
+                <p>This is place holder text for discussion of our process Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                
+                <h3>Sources:</h3>
+                <ul>
+                    <li>City of Chicago Crime API</li>
+                    <li>Open Weather</li>
+                    <li>ML Library</li>
+
+                </ul>
             </div>
         </div>
 
@@ -249,9 +258,11 @@
     </div>
     <br>
 
-    <!-- API key -->
-    <script type="text/javascript" src="../static/js/config.js"></script>
+
+
     <!-- JS  -->
+    <script type="text/javascript" src="../static/js/app.js"></script>
+    <script type="text/javascript" src="../static/js/config.js"></script>
     <script type="text/javascript" src="../static/js/staticmap.js"></script>
     <script type="text/javascript" src="../static/js/dropdown.js"></script>
     <!-- Optional JavaScript -->
