@@ -22,7 +22,6 @@ function buildCharts(crime) {
         return x["2"];
       });
        
-      console.log(response);
 
       var trace1 = {
         type: "scatter",
@@ -30,7 +29,7 @@ function buildCharts(crime) {
         x: temperature,
         y: crimecount,
         line: {
-          color: "#17BECF"
+          color: "rgb(158, 18, 8)"
         }
       };
 

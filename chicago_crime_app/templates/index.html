@@ -36,7 +36,9 @@
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">CrimeBot</a>
+        <a class="navbar-brand" href="#">
+            <img src="../static/img/logo.jpg" width="80" height="50"  alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,18 +47,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#crimeforecastheader">Crime Forecast <span
+                    <a class="nav-link" href="#By Day">By Day<span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#crimepredictorheader">Crime Predictor <span
+                    <a class="nav-link" href="#map">By Area<span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#statisticsheader">Statistics <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#statisticsheader">Sources & Process<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#dataheader">Definitions <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#dataheader">Data & Statistics<span class="sr-only">(current)</span></a>
                 </li>
 
 
@@ -177,7 +179,7 @@
             <div class="col-md-12">
                 <div class="input-group mb-3">
                     <select class="custom-select" id="staticcrime">
-                        <option selected>Choose...</option>
+                        <option selected>ASSAULT</option>
                     </select>
                     <div class="input-group-append">
                         <label class="input-group-text" for="staticcrime">Crime</label>
@@ -190,7 +192,7 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div id="map"></div>
+                <div id="map2"></div>
             </div>
             <div class="col-md-6">
                 <div id="plot"></div>
@@ -210,6 +212,7 @@
     <script type="text/javascript" src="../static/js/staticgraph.js"></script>
     <script type="text/javascript" src="../static/js/config.js"></script>
     <script type="text/javascript" src="../static/js/staticmap.js"></script>
+    <script type="text/javascript" src="../static/js/dynamicmap.js"></script>
     <script type="text/javascript" src="../static/js/dropdown.js"></script>
 
     <!-- Optional JavaScript -->

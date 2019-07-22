@@ -46,15 +46,15 @@ def lStationsJson(crime):
     json_str = results.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
+@app.route("/api/map/<crime>")
+def lStationsJson2(crime):
+    tbl = data['mapdata']
+    results = tbl[tbl[3] == crime]
+    json_str = results.to_json(orient="records")
+    return Response(response=json_str, status=200, mimetype='application/json')
 
-# @app.route("/api/graph")
-# def lStationsJson2():
-#     graph = pd.read_sql(f"""
-#         select  * 
-#         from    {graph_data}
-#         """, db.engine)
-#     json_str = df.to_json(orient="records")
-#     return Response(response=json_str, status=200, mimetype='application/json')
+
+
 
 
     return jsonify(data)
