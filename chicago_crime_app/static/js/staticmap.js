@@ -1,4 +1,6 @@
 // Creating map object
+var index;
+var layer1;
 var map2 = L.map("map2", {
   center: [41.8321135, -87.6804194],
   zoom: 10
@@ -20,8 +22,6 @@ d3.select("#staticcrime").on("change", function () {
   buildCharts(crime);
   buildMap(crime);
 });
-
-
 
 
 function buildMap(crime) {
@@ -55,41 +55,48 @@ function buildMap(crime) {
 
 
     // Function that will determine the color of a neighborhood based on the borough it belongs to
-    function chooseColor(propercommunity) {
-      switch (propercommunity) {
-        case "DOUGLAS":
-          return "yellow";
-        case "ROGERS PARK":
-          return "red";
-        case "Manhattan":
-          return "orange";
-        case "Queens":
-          return "green";
-        case "Staten Island":
-          return "purple";
-        default:
-          return "blue";
-      }
-    }
-
-    // function chooseColor(x) {
-    //   if (crimetally[index] <= maxvalue && crimetally[index] > topquartervalue) {
-    //     color = "red";
-    //   } else if (crimetally[index] <= topquartervalue && crimetally[index] > midvalue) {
-    //     color = "orange";
-    //   } else if (crimetally[index] <= midvalue && crimetally[index] > quartervalue) {
-    //     color = "yellow";
-    //   } else if (crimetally[index] <= quartervalue && crimetally[index] > minvalue) {
-    //     color = "blue";
-    //   } else {
-    //     color = "green";
+    // function chooseColor(propercommunity) {
+    //   switch (propercommunity) {
+    //     case "DOUGLAS":
+    //       return "yellow";
+    //     case "ROGERS PARK":
+    //       return "red";
+    //     case "Manhattan":
+    //       return "orange";
+    //     case "Queens":
+    //       return "green";
+    //     case "Staten Island":
+    //       return "purple";
+    //     default:
+    //       return "blue";
     //   }
     // }
+    function chooseColor(x) {
+      if (crimetally[index] <= maxvalue && crimetally[index] > topquartervalue) {
+        color = "red";
+      } else if (crimetally[index] <= topquartervalue && crimetally[index] > midvalue) {
+        color = "orange";
+      } else if (crimetally[index] <= midvalue && crimetally[index] > quartervalue) {
+        color = "yellow";
+      } else if (crimetally[index] <= quartervalue && crimetally[index] > minvalue) {
+        color = "blue";
+      } else {
+        color = "green";
+      }
+      return color;
+    }
+
 
     // Grabbing our GeoJSON data..
     d3.json(link, function (data) {
       // Creating a geoJSON layer with the retrieved data
-      L.geoJson(data, {
+      console.log(layer1);
+      if (layer1 == null){
+        // Do nothing
+      }else{
+        map2.removeLayer(layer1);
+      }
+      layer1 = L.geoJson(data, {
         // Style each feature (in this case a neighborhood)
         style: function (feature) {
           return {
@@ -122,7 +129,7 @@ function buildMap(crime) {
           });
 
 
-          const index = community.findIndex(community => community === feature.properties.community.split(' ')
+          index = community.findIndex(community => community === feature.properties.community.split(' ')
             .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
             .join(' '));
           console.log(crimetally[index]); // 3

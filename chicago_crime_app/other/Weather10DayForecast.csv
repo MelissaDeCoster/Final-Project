@@ -1,0 +1,16 @@
+,date,day,desc,humidity,precip,temp,wind
+0,JUL 22,Tonight,Clear,63%,0%,--61°,NNW 15 mph 
+1,JUL 23,Tue,Mostly Sunny,54%,20%,78°64°,N 9 mph 
+2,JUL 24,Wed,Sunny,56%,10%,79°64°,NE 8 mph 
+3,JUL 25,Thu,Mostly Sunny,52%,10%,83°67°,S 7 mph 
+4,JUL 26,Fri,Mostly Sunny,55%,0%,85°70°,SSW 13 mph 
+5,JUL 27,Sat,Mostly Sunny,54%,10%,86°72°,SW 16 mph 
+6,JUL 28,Sun,Partly Cloudy,57%,20%,86°73°,SSW 14 mph 
+7,JUL 29,Mon,Scattered Thunderstorms,65%,40%,84°71°,SW 14 mph 
+8,JUL 30,Tue,Scattered Thunderstorms,69%,40%,80°71°,ENE 9 mph 
+9,JUL 31,Wed,Isolated Thunderstorms,68%,30%,83°72°,SSE 11 mph 
+10,AUG 1,Thu,Scattered Thunderstorms,68%,40%,85°72°,SSW 10 mph 
+11,AUG 2,Fri,AM Thunderstorms,66%,40%,84°71°,E 8 mph 
+12,AUG 3,Sat,AM Thunderstorms,65%,40%,84°71°,ESE 9 mph 
+13,AUG 4,Sun,AM Thunderstorms,65%,40%,85°73°,SSE 9 mph 
+14,AUG 5,Mon,Partly Cloudy,65%,20%,85°72°,WSW 8 mph 
