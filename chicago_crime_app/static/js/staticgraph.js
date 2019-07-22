@@ -1,8 +1,6 @@
 
 
 
-
-
 d3.select("#staticcrime").on("change", function(){
   crime = d3.select("#staticcrime").node().value;
   buildCharts(crime);
@@ -21,6 +19,8 @@ function buildCharts(crime) {
       var temperature = response.map(function(x) {
         return x["2"];
       });
+
+      console.log(response)
        
 
       var trace1 = {

@@ -16,6 +16,8 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 d3.select("#staticcrime").on("change", function () {
   crime = d3.select("#staticcrime").node().value;
+ 
+  buildCharts(crime);
   buildMap(crime);
 });
 
@@ -48,34 +50,27 @@ function buildMap(crime) {
     var topquartervalue = Math.round(midvalue + quartervalue);
     var minvalue = Math.min.apply(null, crimetally);
 
-    // console.log(community.indexOf(community));
-
-    // community.forEach((area) => {
-    //   console.log(community.indexOf(area)+area);
-    //   console.log(crimetally[community.indexOf(area)]);
-    //  });
-
 
     var link = "https://nu-chicago-crime-app.s3.us-east-2.amazonaws.com/Boundaries+-+Community+Areas+(current).geojson";
 
 
     // Function that will determine the color of a neighborhood based on the borough it belongs to
-    // function chooseColor(propercommunity) {
-    //   switch (propercommunity) {
-    //     case "DOUGLAS":
-    //       return "yellow";
-    //     case "ROGERS PARK":
-    //       return "red";
-    //     case "Manhattan":
-    //       return "orange";
-    //     case "Queens":
-    //       return "green";
-    //     case "Staten Island":
-    //       return "purple";
-    //     default:
-    //       return "blue";
-    //   }
-    // }
+    function chooseColor(propercommunity) {
+      switch (propercommunity) {
+        case "DOUGLAS":
+          return "yellow";
+        case "ROGERS PARK":
+          return "red";
+        case "Manhattan":
+          return "orange";
+        case "Queens":
+          return "green";
+        case "Staten Island":
+          return "purple";
+        default:
+          return "blue";
+      }
+    }
 
     // function chooseColor(x) {
     //   if (crimetally[index] <= maxvalue && crimetally[index] > topquartervalue) {

@@ -15,8 +15,8 @@ var map = L.map("map", {
   var link = "https://nu-chicago-crime-app.s3.us-east-2.amazonaws.com/Boundaries+-+Community+Areas+(current).geojson";
   
 
-  // Function that will determine the color of a neighborhood based on the borough it belongs to
-function chooseColor(community) {
+//   Function that will determine the color of a neighborhood based on the borough it belongs to
+function chooseDynamicMapColor(community) {
   switch (community) {
   case "DOUGLAS":
     return "yellow";
@@ -44,7 +44,7 @@ d3.json(link, function(data) {
       return {
         color: "black",
         // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-        fillColor: chooseColor(feature.properties.community),
+        fillColor: chooseDynamicMapColor(feature.properties.community),
         fillOpacity: 0.5,
         weight: 1.5
       };
