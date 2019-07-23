@@ -92,9 +92,9 @@
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body ">
-                        <p class="card-text">July 22, 2019</p>
-                        <i class="fas fa-sun fa-5x"></i>
-                        <h5 class="card-title card-degrees">80º F</h5>
+                        <p class="card-text" id="dayonedate"></p>
+                        <i class="fas fa-sun fa-5x" id="dayonecloud"></i>
+                        <h5 class="card-title card-degrees" id="dayonetemp"></h5>
                         <p class="card-text">31 Incidents</p>
                     </div>
                 </div>
@@ -102,9 +102,9 @@
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
-                        <p class="card-text">July 23, 2019</p>
+                        <p class="card-text" id="daytwodate"></p>
                         <i class="fas fa-cloud-showers-heavy fa-5x"></i>
-                        <h5 class="card-title card-degrees">65º F</h5>
+                        <h5 class="card-title card-degrees" id="daytwotemp"></h5>
                         <p class="card-text">78 Incidents</p>
                     </div>
                 </div>
@@ -112,9 +112,9 @@
             <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-body">
-                        <p class="card-text">July 24, 2019</p>
+                        <p class="card-text" id="daythreedate"></p>
                         <i class="fas fa-cloud-sun fa-5x"></i>
-                        <h5 class="card-title card-degrees">65º F</h5>
+                        <h5 class="card-title card-degrees" id="daythreetemp"></h5>
                         <p class="card-text">78 Incidents</p>
                     </div>
                 </div>
@@ -214,6 +214,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
     <!-- JS  -->
+    <script type="text/javascript" src="../static/js/forecast.js"></script>
     <script type="text/javascript" src="../static/js/staticgraph.js"></script>
     <script type="text/javascript" src="../static/js/config.js"></script>
     <script type="text/javascript" src="../static/js/staticmap.js"></script>

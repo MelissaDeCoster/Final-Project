@@ -20,7 +20,6 @@ function buildCharts(crime) {
         return x["2"];
       });
 
-      console.log(response)
        
 
       var trace1 = {

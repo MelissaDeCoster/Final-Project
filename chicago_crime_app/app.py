@@ -56,7 +56,30 @@ def lStationsJson2(crime):
     json_str = results.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
+@app.route("/api/forecast")
+def lStationsJson3():
+    tbl = data['three_day_forecast']
+    # results = tbl[tbl[3] == crime]
+    json_str = tbl.to_json(orient="records")
+    return Response(response=json_str, status=200, mimetype='application/json')
 
+# @app.route("/api/prediction")
+# def lStationsJson4():
+#     tbl = data['modeldata1']
+#     json_str = tbl.to_json(orient="records")
+#     return Response(response=json_str, status=200, mimetype='application/json')
+
+# @app.route("/api/prediction")
+# def lStationsJson5():
+#     tbl = data['modeldata2']
+#     json_str = tbl.to_json(orient="records")
+#     return Response(response=json_str, status=200, mimetype='application/json')
+
+# @app.route("/api/prediction")
+# def lStationsJson6():
+#     tbl = data['modeldata3']
+#     json_str = tbl.to_json(orient="records")
+#     return Response(response=json_str, status=200, mimetype='application/json')
 
 
 

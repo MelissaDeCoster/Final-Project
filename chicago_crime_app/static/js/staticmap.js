@@ -50,11 +50,11 @@ function buildMap(crime) {
     var topquartervalue = Math.round(midvalue + quartervalue);
     var minvalue = Math.min.apply(null, crimetally);
 
-    console.log(crime + "Max: "+maxvalue);
-    console.log(crime + "Top Quarter:" +topquartervalue);
-    console.log("Mid:" +midvalue);
-    console.log("Bottom Quarter: "+quartervalue);
-    console.log("Min: "+minvalue);
+    // console.log(crime + "Max: "+maxvalue);
+    // console.log(crime + "Top Quarter:" +topquartervalue);
+    // console.log("Mid:" +midvalue);
+    // console.log("Bottom Quarter: "+quartervalue);
+    // console.log("Min: "+minvalue);
 
 
 
@@ -84,7 +84,7 @@ function buildMap(crime) {
     // Grabbing our GeoJSON data..
     d3.json(link, function (data) {
       // Creating a geoJSON layer with the retrieved data
-      console.log(layer1);
+      // console.log(layer1);
       if (layer1 == null){
         // Do nothing
       }else{
