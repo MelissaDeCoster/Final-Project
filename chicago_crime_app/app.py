@@ -4,6 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.ext.automap import automap_base
 import pandas as pd
+import pymysql
+pymysql.install_as_MySQLdb()
 
 
 
@@ -11,6 +13,9 @@ app = Flask(__name__)
     
 # ************** Database Setup ***************
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///static/db/simpledata.sqlite"
+
+engine = create_engine("mysql://admin:NUDataScience2019@nu-chicago-crime-app.ccjnkjeza5yv.us-east-2.rds.amazonaws.com:3306/chicago_crime_app")
+conn = engine.connect()
 
 # Attach db to Flask app so Flask handels db session managment and other good things
 db = SQLAlchemy(app)

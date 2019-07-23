@@ -39,9 +39,11 @@ function buildCharts(crime) {
         title: `${crime} VS TEMPERATURE`,
         xaxis: {
           title: 'TEMPERATURE (°F)',
+          showgrid:false 
         },
         yaxis: {
-          title: 'TOTAL INCIDENCES SINCE 2010'
+          title: 'TOTAL INCIDENCES SINCE 2010',
+          showgrid:false
         }
       };
       
