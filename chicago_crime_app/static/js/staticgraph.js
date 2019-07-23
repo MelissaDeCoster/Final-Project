@@ -37,19 +37,20 @@ function buildCharts(crime) {
 
       var layout = {
         title: `${crime} VS TEMPERATURE`,
-        // xaxis: {
-        //   type: "temp"
-        // },
-        // yaxis: {
-        //   autorange: true,
-        //   type: "linear"
-        // }
+        xaxis: {
+          title: 'TEMPERATURE (°F)',
+        },
+        yaxis: {
+          title: 'TOTAL INCIDENCES SINCE 2010'
+        }
       };
       
       Plotly.newPlot("plot", data, layout);
 
   });
 };
+
+d3.select("#staticcrime").dispatch("change");
 
 
 

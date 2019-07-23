@@ -50,38 +50,32 @@ function buildMap(crime) {
     var topquartervalue = Math.round(midvalue + quartervalue);
     var minvalue = Math.min.apply(null, crimetally);
 
+    console.log(crime + "Max: "+maxvalue);
+    console.log(crime + "Top Quarter:" +topquartervalue);
+    console.log("Mid:" +midvalue);
+    console.log("Bottom Quarter: "+quartervalue);
+    console.log("Min: "+minvalue);
+
+
 
     var link = "https://nu-chicago-crime-app.s3.us-east-2.amazonaws.com/Boundaries+-+Community+Areas+(current).geojson";
 
 
-    // Function that will determine the color of a neighborhood based on the borough it belongs to
-    // function chooseColor(propercommunity) {
-    //   switch (propercommunity) {
-    //     case "DOUGLAS":
-    //       return "yellow";
-    //     case "ROGERS PARK":
-    //       return "red";
-    //     case "Manhattan":
-    //       return "orange";
-    //     case "Queens":
-    //       return "green";
-    //     case "Staten Island":
-    //       return "purple";
-    //     default:
-    //       return "blue";
-    //   }
-    // }
-    function chooseColor(x) {
-      if (crimetally[index] <= maxvalue && crimetally[index] > topquartervalue) {
-        color = "red";
-      } else if (crimetally[index] <= topquartervalue && crimetally[index] > midvalue) {
-        color = "orange";
-      } else if (crimetally[index] <= midvalue && crimetally[index] > quartervalue) {
-        color = "yellow";
-      } else if (crimetally[index] <= quartervalue && crimetally[index] > minvalue) {
-        color = "blue";
+    function chooseColor(feature) {
+      var thiscurrentarea = feature.properties.community
+      index = community.findIndex(community => community === feature.properties.community.split(' ')
+            .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+            .join(' '));
+      if (crimetally[index] <= maxvalue & crimetally[index] > topquartervalue) {
+        color = "rgb(122, 0, 45)";
+      } else if (crimetally[index] <= topquartervalue & crimetally[index] > midvalue) {
+        color = "rgb(169, 62, 60)";
+      } else if (crimetally[index] <= midvalue & crimetally[index] > quartervalue) {
+        color = "rgb(207, 112, 71)";
+      } else if (crimetally[index] <= quartervalue & crimetally[index] > minvalue) {
+        color = "rgb(232, 155, 83)";
       } else {
-        color = "green";
+        color = "rgb(243, 191, 94)";
       }
       return color;
     }
@@ -102,8 +96,8 @@ function buildMap(crime) {
           return {
             color: "black",
             // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-            fillColor: chooseColor(feature.properties.community),
-            fillOpacity: 0.5,
+            fillColor: chooseColor(feature),
+            fillOpacity: 1,
             weight: 1.5
           };
         },
@@ -116,26 +110,26 @@ function buildMap(crime) {
             mouseover: function (event) {
               layer = event.target;
               layer.setStyle({
-                fillOpacity: 0.9
+                fillOpacity: 0.5
               });
             },
             // When the cursor no longer hovers over a map feature - when the mouseout event occurs - the feature's opacity reverts back to 50%
             mouseout: function (event) {
               layer = event.target;
               layer.setStyle({
-                fillOpacity: 0.5
+                fillOpacity: 1
               });
             },
           });
 
 
-          index = community.findIndex(community => community === feature.properties.community.split(' ')
-            .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
-            .join(' '));
-          console.log(crimetally[index]); // 3
+          // index = community.findIndex(community => community === feature.properties.community.split(' ')
+          //   .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+          //   .join(' '));
+          // console.log(crimetally[index]); // 3
 
           // Giving each feature a pop-up with information pertinent to it
-          layer.bindPopup("<h3>" + feature.properties.community + "</h3> <hr> <h4>" + crimetally[index] + "</h4>");
+          layer.bindPopup("<h3>" + feature.properties.community + "</h3> <hr> <h4>" + crime +" "+ crimetally[index] + "</h4>");
 
 
 
@@ -147,7 +141,7 @@ function buildMap(crime) {
   });
 };
 
-
+d3.select("#staticcrime").dispatch("change");
 
 
 
