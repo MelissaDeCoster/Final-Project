@@ -12,23 +12,21 @@ pymysql.install_as_MySQLdb()
 app = Flask(__name__)
     
 # ************** Database Setup ***************
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///static/db/simpledata.sqlite"
-
-engine = create_engine("mysql://admin:NUDataScience2019@nu-chicago-crime-app.ccjnkjeza5yv.us-east-2.rds.amazonaws.com:3306/chicago_crime_app")
-conn = engine.connect()
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://admin:NUDataScience2019@nu-chicago-crime-app.ccjnkjeza5yv.us-east-2.rds.amazonaws.com:3306/chicago_crime_app"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Attach db to Flask app so Flask handels db session managment and other good things
 db = SQLAlchemy(app)
 
 data = {}
 e = db.get_engine()
-table_names = e.table_names()
+table_names = ['graphdata', 'mapdata', 'three_day_forecast'] #e.table_names()
 for name in table_names:
 	tbl = e.execute('SELECT * FROM {}'.format(name)).fetchall()
 	data[name] = pd.DataFrame(tbl)
-	
+
 # Futher down in code, to access data:
-data['graphdata']
+data['graphdata'] 
 
 
 
