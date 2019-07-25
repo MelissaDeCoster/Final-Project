@@ -59,7 +59,6 @@ def lStationsJson2(crime):
 @app.route("/api/forecast")
 def lStationsJson3():
     tbl = data['three_day_forecast']
-    # results = tbl[tbl[3] == crime]
     json_str = tbl.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 

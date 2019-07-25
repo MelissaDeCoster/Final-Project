@@ -1,11 +1,4 @@
 
-
-
-d3.select("#staticcrime").on("change", function(){
-  crime = d3.select("#staticcrime").node().value;
-  buildCharts(crime);
-});
-
 function buildCharts(crime) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
   var chartsURL = "/api/graph/" + crime;

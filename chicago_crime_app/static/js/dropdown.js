@@ -1,5 +1,6 @@
 
 var static_crime = document.getElementById("staticcrime");
+var forecast_crime = document.getElementById("forecastcrime");
 
 
 var options = ["BATTERY", "BURGLARY", "CONCEALED CARRY LICENSE VIOLATION", "CRIM SEXUAL ASSAULT", "CRIMINAL DAMAGE"
@@ -14,4 +15,12 @@ for (var i = 0; i < options.length; i++) {
     el.textContent = opt;
     el.value = opt;
     static_crime.appendChild(el);
+}
+
+for (var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    forecast_crime.appendChild(el);
 }
