@@ -1,7 +1,9 @@
 
 var static_crime = document.getElementById("staticcrime");
 var forecast_crime = document.getElementById("forecastcrime");
-
+var predict_crime1 = document.getElementById("predict_crime1");
+var predict_crime2 = document.getElementById("predict_crime2");
+var predict_crime3 = document.getElementById("predict_crime3");
 
 var options = ["BATTERY", "BURGLARY", "CONCEALED CARRY LICENSE VIOLATION", "CRIM SEXUAL ASSAULT", "CRIMINAL DAMAGE"
 ,"GAMBLING", "HOMICIDE", "HUMAN TRAFFICKING", "INTERFERENCE WITH PUBLIC OFFICER", "LIQUOR LAW VIOLATION", "MOTOR VEHICLE THEFT"
@@ -24,3 +26,4 @@ for (var i = 0; i < options.length; i++) {
     el.value = opt;
     forecast_crime.appendChild(el);
 }
+

@@ -23,7 +23,7 @@ d3.select("#forecastcrime").on("change", function () {
 });
 
 d3.select("#predictorday").on("change", function () {
-    crime = d3.select("#predictorday").node().value;
+    crime = d3.select("#forecastcrime").node().value;
     day = d3.select("#predictorday").node().value;
     buildMap2(crime, day);
   });
@@ -31,9 +31,10 @@ d3.select("#predictorday").on("change", function () {
 
 function buildMap2(crime, day) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  var mapURL = "/api/prediction/" + crime +"/";
+  var mapURL2 = "/api/prediction" + day + "/" + crime;
+  //var mapURL2 = mapURL3.substring(0, mapURL3.length - 1);
   // @TODO: Build a Bubble Chart using the sample data
-  d3.json(mapURL, function (error, response) {
+  d3.json(mapURL2, function (error, response) {
 
     var crimecount = response.map(function (x) {
       return x["1"];
@@ -101,7 +102,7 @@ function buildMap2(crime, day) {
           return {
             color: "black",
             // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-            fillColor: chooseColor(feature),
+            fillColor: chooseColor2(feature),
             fillOpacity: 1,
             weight: 1.5
           };

@@ -62,22 +62,21 @@ def lStationsJson3():
     json_str = tbl.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
-@app.route("/api/prediction1/<crime>")
+@app.route("/api/predictionDay1/<crime>")
 def lStationsJson4(crime):
     tbl = data['scikitlearn_results_day_1']
     results = tbl[tbl[7] == crime] 
     json_str = results.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
-
-@app.route("/api/prediction2/<crime>")
+@app.route("/api/predictionDay2/<crime>")
 def lStationsJson5(crime):
     tbl = data['scikitlearn_results_day_2']
     results = tbl[tbl[7] == crime] 
     json_str = results.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
-@app.route("/api/prediction3/<crime>")
+@app.route("/api/predictionDay3/<crime>")
 def lStationsJson6(crime):
     tbl = data['scikitlearn_results_day_3']
     results = tbl[tbl[7] == crime] 
