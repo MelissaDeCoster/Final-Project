@@ -18,30 +18,24 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 d3.select("#forecastcrime").on("change", function () {
   crime = d3.select("#forecastcrime").node().value;
-  day = d3.select("#predictorday").node().value;
-  buildMap2(crime,day);
+  buildMap2(crime);
 });
 
-d3.select("#predictorday").on("change", function () {
-    crime = d3.select("#forecastcrime").node().value;
-    day = d3.select("#predictorday").node().value;
-    buildMap2(crime, day);
-  });
 
 
-function buildMap2(crime, day) {
+function buildMap2(crime) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  var mapURL2 = "/api/prediction" + day + "/" + crime;
+  var mapURL2 = "/api/predictionDay1" + "/" + crime;
   //var mapURL2 = mapURL3.substring(0, mapURL3.length - 1);
   // @TODO: Build a Bubble Chart using the sample data
   d3.json(mapURL2, function (error, response) {
 
     var crimecount = response.map(function (x) {
-      return x["1"];
+      return x["5"];
     });
 
     var community = response.map(function (x) {
-      return x["2"];
+      return x["6"];
     });
 
     var crimetally = []
