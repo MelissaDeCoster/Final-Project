@@ -31,7 +31,7 @@ d3.select("#predictorday").on("change", function () {
 
 function buildMap2(crime, day) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
-  var mapURL = "/api/prediction/" + crime +"/"+ day;
+  var mapURL = "/api/prediction/" + crime +"/";
   // @TODO: Build a Bubble Chart using the sample data
   d3.json(mapURL, function (error, response) {
 
