@@ -20,7 +20,7 @@ db = SQLAlchemy(app)
 
 data = {}
 e = db.get_engine()
-table_names = ['graphdata', 'mapdata', 'three_day_forecast'] #e.table_names()
+table_names = ['graphdata', 'mapdata', 'three_day_forecast', 'scikitlearn_results'] #e.table_names()
 for name in table_names:
 	tbl = e.execute('SELECT * FROM {}'.format(name)).fetchall()
 	data[name] = pd.DataFrame(tbl)
@@ -62,23 +62,14 @@ def lStationsJson3():
     json_str = tbl.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
-# @app.route("/api/prediction")
-# def lStationsJson4():
-#     tbl = data['modeldata1']
-#     json_str = tbl.to_json(orient="records")
-#     return Response(response=json_str, status=200, mimetype='application/json')
+@app.route("/api/prediction/<day>/<crime>")
+def lStationsJson4(day, crime):
+    tbl = data['scikitlearn_results']
+    results = tbl[tbl[1] == day and tbl[7] == crime]
+    json_str = tbl.to_json(orient="records")
+    return Response(response=json_str, status=200, mimetype='application/json')
 
-# @app.route("/api/prediction")
-# def lStationsJson5():
-#     tbl = data['modeldata2']
-#     json_str = tbl.to_json(orient="records")
-#     return Response(response=json_str, status=200, mimetype='application/json')
 
-# @app.route("/api/prediction")
-# def lStationsJson6():
-#     tbl = data['modeldata3']
-#     json_str = tbl.to_json(orient="records")
-#     return Response(response=json_str, status=200, mimetype='application/json')
 
 
 
