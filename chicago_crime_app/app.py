@@ -62,11 +62,11 @@ def lStationsJson3():
     json_str = tbl.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
-@app.route("/api/prediction/<day>/<crime>")
-def lStationsJson4(day, crime):
+@app.route("/api/prediction/<crime>")
+def lStationsJson4(crime):
     tbl = data['scikitlearn_results']
-    results = tbl[tbl[1] == day and tbl[7] == crime]
-    json_str = tbl.to_json(orient="records")
+    results = tbl[tbl[7] == crime] 
+    json_str = results.to_json(orient="records")
     return Response(response=json_str, status=200, mimetype='application/json')
 
 
